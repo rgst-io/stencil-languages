@@ -26,9 +26,9 @@ import (
 	"gotest.tools/v3/assert"
 )
 
-// TestGolangGoModMerge ensures that we can call the GolangGoModMerge
+// TestGolangMergeGoMod ensures that we can call the GolangMergeGoMod
 // template function.
-func TestGolangGoModMerge(t *testing.T) {
+func TestGolangMergeGoMod(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	t.Cleanup(cancel)
 
