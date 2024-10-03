@@ -4,7 +4,6 @@ go 1.23
 
 require (
 	github.com/blang/semver/v4 v4.0.0
-	github.com/google/go-cmp v0.6.0
 	go.rgst.io/stencil v0.11.0
 	golang.org/x/mod v0.21.0
 	gotest.tools/v3 v3.5.1
@@ -18,6 +17,7 @@ require (
 	github.com/fatih/color v1.17.0 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/hashicorp/go-hclog v1.6.3 // indirect
 	github.com/hashicorp/go-plugin v1.6.1 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect
