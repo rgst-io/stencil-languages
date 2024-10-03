@@ -1,0 +1,8 @@
+name: stencil-languages
+arguments:
+  org: rgst-io
+  license: GPL-3.0
+  commands:
+    - plugin
+modules:
+  - name: github.com/rgst-io/stencil-golang

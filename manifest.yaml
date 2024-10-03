@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://stencil.rgst.io/static/manifest.jsonschema.json
+name: github.com/rgst-io/stencil-languages
+type:
+  - extension
+arguments: {}
