@@ -5,7 +5,7 @@ go 1.23
 require (
 	github.com/blang/semver/v4 v4.0.0
 	go.rgst.io/stencil v0.12.0
-	golang.org/x/mod v0.21.0
+	golang.org/x/mod v0.22.0
 	gotest.tools/v3 v3.5.1
 )
 
