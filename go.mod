@@ -6,7 +6,7 @@ require (
 	github.com/blang/semver/v4 v4.0.0
 	go.rgst.io/stencil v0.15.4
 	golang.org/x/mod v0.23.0
-	gotest.tools/v3 v3.5.1
+	gotest.tools/v3 v3.5.2
 )
 
 require (
