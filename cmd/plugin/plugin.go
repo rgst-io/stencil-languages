@@ -15,6 +15,8 @@
 //
 // SPDX-License-Identifier: GPL-3.0
 
+// Package main wraps the plugin logic so that it can be called by
+// stencil.
 package main
 
 import (

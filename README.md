@@ -7,7 +7,7 @@ language specific files.
 
 ### Golang
 
-* Merging `go.mod` files with `GolangMergeGoMod`. Example usage:
+- Merging `go.mod` files with `GolangMergeGoMod`. Example usage:
 
 ```go
 // go.mod.tpl
