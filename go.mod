@@ -1,6 +1,6 @@
 module github.com/rgst-io/stencil-languages
 
-go 1.23.4
+go 1.25
 
 require (
 	github.com/blang/semver/v4 v4.0.0
