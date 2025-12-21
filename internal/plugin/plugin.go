@@ -24,7 +24,7 @@ import (
 	"fmt"
 
 	"github.com/rgst-io/stencil-languages/internal/languages/golang"
-	"go.rgst.io/stencil/pkg/extensions/apiv1"
+	"go.rgst.io/stencil/v2/pkg/extensions/apiv1"
 )
 
 // _ ensures that StencilGolangPlugin implements the [apiv1.Implementation] interface.

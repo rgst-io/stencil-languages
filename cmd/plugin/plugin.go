@@ -25,8 +25,8 @@ import (
 	"os/signal"
 
 	"github.com/rgst-io/stencil-languages/internal/plugin"
-	"go.rgst.io/stencil/pkg/extensions/apiv1"
-	"go.rgst.io/stencil/pkg/slogext"
+	"go.rgst.io/stencil/v2/pkg/extensions/apiv1"
+	"go.rgst.io/stencil/v2/pkg/slogext"
 )
 
 // main starts the stencil-languages plugin

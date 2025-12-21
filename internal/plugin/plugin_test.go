@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/rgst-io/stencil-languages/internal/plugin"
-	"go.rgst.io/stencil/pkg/extensions/apiv1"
+	"go.rgst.io/stencil/v2/pkg/extensions/apiv1"
 	"gotest.tools/v3/assert"
 )
 
