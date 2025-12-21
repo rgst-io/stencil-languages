@@ -4,6 +4,9 @@ go 1.25
 
 require (
 	github.com/blang/semver/v4 v4.0.0
+	github.com/google/go-cmp v0.7.0
+	github.com/google/go-github/v80 v80.0.0
+	github.com/jaredallard/vcs v1.0.1
 	go.rgst.io/stencil/v2 v2.11.1
 	golang.org/x/mod v0.31.0
 	gotest.tools/v3 v3.5.2
@@ -23,10 +26,11 @@ require (
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/go-logfmt/logfmt v0.6.1 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
-	github.com/google/go-cmp v0.7.0 // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/hashicorp/go-hclog v1.6.3 // indirect
 	github.com/hashicorp/go-plugin v1.7.0 // indirect
 	github.com/hashicorp/yamux v0.1.2 // indirect
+	github.com/jaredallard/cmdexec v1.3.0 // indirect
 	github.com/lucasb-eyer/go-colorful v1.3.0 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect

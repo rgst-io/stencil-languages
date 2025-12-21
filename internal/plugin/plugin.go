@@ -23,6 +23,10 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/google/go-github/v80/github"
+	"github.com/jaredallard/vcs"
+	"github.com/jaredallard/vcs/token"
+	"github.com/rgst-io/stencil-languages/internal/languages/githubactions"
 	"github.com/rgst-io/stencil-languages/internal/languages/golang"
 	"go.rgst.io/stencil/v2/pkg/extensions/apiv1"
 )
@@ -33,11 +37,24 @@ var _ apiv1.Implementation = &Instance{}
 // Instance contains a [apiv1.Implementation] satisfying plugin.
 type Instance struct {
 	ctx context.Context
+	gh  *github.Client
 }
 
 // New creates a new [Instance].
 func New(ctx context.Context) *Instance {
-	return &Instance{ctx: ctx}
+	// Create an authenticated token, if possible
+	var tstr string
+	t, err := token.Fetch(ctx, vcs.ProviderGithub, false, &token.Options{AllowUnauthenticated: true})
+	if err == nil {
+		tstr = t.Value
+	}
+
+	gh := github.NewClient(nil)
+	if tstr != "" {
+		gh = gh.WithAuthToken(tstr)
+	}
+
+	return &Instance{ctx: ctx, gh: gh}
 }
 
 // GetConfig returns a [apiv1.Config] for the [Instance].
@@ -53,6 +70,11 @@ func (*Instance) GetTemplateFunctions() ([]*apiv1.TemplateFunction, error) {
 		{
 			Name:              "GolangMergeGoMod",
 			NumberOfArguments: 2,
+		},
+		// GithubActionsPinAction calls [githubactions.PinAction].
+		{
+			Name:              "GithubActionsPinAction",
+			NumberOfArguments: 1,
 		},
 	}, nil
 }
@@ -77,6 +99,20 @@ func (i *Instance) ExecuteTemplateFunction(exec *apiv1.TemplateFunctionExec) (an
 			return "", err
 		}
 		return string(resp), nil
+	case "GithubActionsPinAction":
+		action, ok := exec.Arguments[0].(string)
+		if !ok {
+			return nil, fmt.Errorf("argument 0 invalid, expected string got %T", exec.Arguments[0])
+		}
+
+		pa, err := githubactions.PinAction(i.ctx, i.gh, action)
+		if err != nil {
+			return "", err
+		}
+
+		// org/action@<commit> # <tag>
+		return pa.Action + "@" + pa.Commit + " # " + pa.Tag, nil
 	}
+
 	return nil, fmt.Errorf("unknown template function: %s", exec.Name)
 }

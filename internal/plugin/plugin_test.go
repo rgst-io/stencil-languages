@@ -44,3 +44,19 @@ func TestGolangMergeGoMod(t *testing.T) {
 	assert.NilError(t, err, "failed to execute template function")
 	assert.Equal(t, resp, "go 1.17\n", "expected go1.17")
 }
+
+// TestGithubActionsPinAction ensures that we can call the
+// GithubActionsPinAction template function.
+func TestGithubActionsPinAction(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	t.Cleanup(cancel)
+
+	var impl apiv1.Implementation = plugin.New(ctx)
+
+	resp, err := impl.ExecuteTemplateFunction(&apiv1.TemplateFunctionExec{
+		Name:      "GithubActionsPinAction",
+		Arguments: []any{"jdx/mise-action@v3.5.1"},
+	})
+	assert.NilError(t, err, "failed to execute template function")
+	assert.Equal(t, resp, "jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1")
+}
