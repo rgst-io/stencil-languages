@@ -4,7 +4,7 @@ go 1.25
 
 require (
 	github.com/blang/semver/v4 v4.0.0
-	go.rgst.io/stencil/v2 v2.11.1
+	go.rgst.io/stencil/v2 v2.13.0
 	golang.org/x/mod v0.32.0
 	gotest.tools/v3 v3.5.2
 )
