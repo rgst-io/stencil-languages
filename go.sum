@@ -90,6 +90,8 @@ go.opentelemetry.io/otel/trace v1.38.0 h1:Fxk5bKrDZJUH+AMyyIXGcFAPah0oRcT+LuNtJr
 go.opentelemetry.io/otel/trace v1.38.0/go.mod h1:j1P9ivuFsTceSWe1oY+EeW3sc+Pp42sO++GHkg4wwhs=
 go.rgst.io/stencil/v2 v2.11.1 h1:2JFkXWNTMH512ZZUMzRQGj4KjInC6rrC/yybs5HmWFQ=
 go.rgst.io/stencil/v2 v2.11.1/go.mod h1:x8HU1yOw1i5TfwfhWIFDtoC3By04Jcf8uRALt6q886E=
+go.rgst.io/stencil/v2 v2.13.0 h1:nuq5hqsH8lveLfSvFSM65zC05SJr4C1fhqfM9A1ZAlY=
+go.rgst.io/stencil/v2 v2.13.0/go.mod h1:5/Y8+DQTy4Xu+50IeEm85Agj7nrTVt0dcK+zhVEVHUk=
 golang.org/x/exp v0.0.0-20251219203646-944ab1f22d93 h1:fQsdNF2N+/YewlRZiricy4P1iimyPKZ/xwniHj8Q2a0=
 golang.org/x/exp v0.0.0-20251219203646-944ab1f22d93/go.mod h1:EPRbTFwzwjXj9NpYyyrvenVh9Y+GFeEvMNh7Xuz7xgU=
 golang.org/x/mod v0.31.0 h1:HaW9xtz0+kOcWKwli0ZXy79Ix+UW/vOfmWI5QVd2tgI=
