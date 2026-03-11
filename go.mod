@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/blang/semver/v4 v4.0.0
 	go.rgst.io/stencil/v2 v2.14.0
-	golang.org/x/mod v0.33.0
+	golang.org/x/mod v0.34.0
 	gotest.tools/v3 v3.5.2
 )
 
